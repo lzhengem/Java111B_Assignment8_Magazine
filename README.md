@@ -1,6 +1,6 @@
 Magazine Assignment - Due 12/14
 
-1) due 12/4 
+1) due 12/4 CL
 - Modify Magazine class
   Implement Comparable interface and override compareTo method. 
   compareTo method determines whether one Magazine object's title 
@@ -9,7 +9,7 @@ Magazine Assignment - Due 12/14
   Instead of hardcoding values, create loop to prompt and read titles from 
   user input as long as user wants to continue.
 
-2) due 12/7
+2) due 12/7 QD
 - Modify Magazine Rack class
   open and read titles from text file mags.dat inserting values into the list.
   if mag.dat does not exist inform user. Use a try/catch block for this code.
@@ -17,7 +17,7 @@ Magazine Assignment - Due 12/14
   Add deleteAll() method to delete all magazines from list. 
 
 
-3) due 12/11
+3) due 12/11 LZ
 - Modify MagazineList class
   Add an insert method/operation into the MagazineList class. Your insert method 
   will insert each magazine lexigraphically (ascii order) into the list (after 
