@@ -5,21 +5,24 @@ class TryToParseDouble{
   public static void main (String[] args){
     Scanner scan = new Scanner(System.in);
     String user_input;
-    Double myDouble;
+    Double myDouble = 0.0;
+    boolean cont = true;
 
-    try{
-      System.out.println("Type in a double");
-      user_input = scan.nextLine();
-      myDouble = Double.parseDouble(user_input);
-    }
-    catch(NumberFormatException e){
-      myDouble = 0.0;
-      System.out.println("You put in a bad number you get 0 now");
+    while (cont) {    
+            try{
+              System.out.println("Type in a double");
+              user_input = scan.nextLine();
+              myDouble = Double.parseDouble(user_input);
+              cont = false;
+            }
+            catch(NumberFormatException e){
+              //System.out.println("You put in a bad number you get 0 now");
+              System.out.println("You put in a bad number please try again \n");
+            }
 
-    }
-
-    System.out.println("The double is " + myDouble);
+            }
+  
+            System.out.println("The double is " + myDouble);
   }
 	
-
 }
