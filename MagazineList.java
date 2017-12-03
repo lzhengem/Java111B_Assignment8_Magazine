@@ -72,4 +72,9 @@ public class MagazineList
             next = null;
         }
     }
+    
+    //Deletes all magazines
+    public void deleteAll(){
+        list = null;
+    }
 }
