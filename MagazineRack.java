@@ -18,8 +18,22 @@ public class MagazineRack
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
         String newTitle;
-        File file = new File("mag.text");
+        String newLine; //records the data that is read in the text file
+        File file = new File("mags.dat");
         
+        //Read file
+        try{ 
+            System.out.println("Here are your magazine titles:");
+            Scanner read = new Scanner(file);
+            for(int j=1; read.hasNextLine();j++){
+                newLine = read.nextLine();
+                System.out.println(j +":"+newLine);
+                }
+             read.close();
+            }
+        catch(IOException e){
+            System.out.println("Sorry no magazine exist in that file");
+        }
         
         do {
              System.out.println("\nPlease type the title of a Magazine: (Hit enter if done)");
@@ -32,24 +46,14 @@ public class MagazineRack
         
         //Write the file
         try{
+            FileWriter writeFile = new FileWriter(file, true);
+            BufferedWriter fileInput = new BufferedWriter(writeFile);
             PrintWriter fileOutPut = new PrintWriter(file);
             fileOutPut.println(rack);
             fileOutPut.close();
         }
         catch(IOException error){
-            System.out.println("File cannot be empty");
-        }
-        
-        //Read file
-        try{
-            Scanner read = new Scanner(file);
-            String one = read.nextLine();
-            String two = read.nextLine();
-            String three = read.nextLine();
-            System.out.println(one + "\n" + two + "\n" +three);
-        }
-        catch(IOException e){
-            System.out.println("File does not exsit");
-        }
+            System.out.println("File is opened in another program, cannot write file"  }
+
     }
 }
