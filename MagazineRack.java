@@ -15,7 +15,6 @@ public class MagazineRack
     //----------------------------------------------------------------
     public static void main(String[] args)
     {    
-        System.out.println("A".compareTo("b"));
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
         String newTitle,deleteTitle;
@@ -24,11 +23,10 @@ public class MagazineRack
         File file = new File("mags.dat");
         boolean keepEnteringTitle = true;
 
-        
         //Read file
         try{ 
-            System.out.println("Here are your magazine titles:");
             Scanner read = new Scanner(file);
+            System.out.println("Here are your magazine titles:");
             for(int j=1; read.hasNextLine();j++){
                 newLine = read.nextLine();
                 System.out.println(j +":"+newLine);
@@ -36,8 +34,8 @@ public class MagazineRack
                 }
              read.close();
             }
-        catch(IOException e){
-            System.out.println("Sorry no magazine exist in that file");
+        catch(FileNotFoundException e){
+            System.out.println(file +" does not exist.");
         }
         
         while(keepEnteringTitle){
