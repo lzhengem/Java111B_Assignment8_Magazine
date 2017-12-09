@@ -2,7 +2,7 @@
 //  Magazine.java       Author: Lewis/Loftus
 //
 //  Represents a single magazine.
-//  modified CLIN, LZHENG, and QDLI on 2017-11-29
+//  modified LZHENG, and QDLI on 2017-12/8/17
 //  implemented compare to method to compare titles between two magazines.
 //
 ////********************************************************************

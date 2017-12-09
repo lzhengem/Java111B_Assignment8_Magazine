@@ -2,7 +2,7 @@
 //  MagazineRack.java       Author: Lewis/Loftus
 //
 //  Driver to exercise the MagazineList collection.
-//  modified CLIN, LZHENG, and QDLI on 2017-11-29
+//  modified LZHENG, and QDLI on 12/8/17
 //  created do loop to prompt user addition to Rack 2017-11-29
 //*******************************************************************
 import java.util.Scanner;
