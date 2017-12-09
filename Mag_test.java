@@ -28,9 +28,11 @@ public class Mag_test
         System.out.println("Removing " + mag3 + ": ");
         magList.delete(mag3);
         System.out.println(magList);
+        
         System.out.println("Removing " + mag2 + ": ");
         magList.delete(mag2);
         System.out.println(magList);
+
         System.out.println("Removing " + mag2 + ": ");
         magList.delete(mag2);
         System.out.println(magList);

@@ -103,13 +103,16 @@ public class MagazineList
         MagazineNode currentNode = list;
         MagazineNode magNode = new MagazineNode(mag);
         if(list != null){
+            // if deleting the first magazine, set list to the next node
             if (magNode.magazine.compareTo(currentNode.magazine) == 0)
                 list = currentNode.next;
             else{
+                // if the next node isnt the node to be removed, keep moving to the next node
                 while(currentNode.next != null && magNode.magazine.compareTo(currentNode.next.magazine) != 0){
                     currentNode = currentNode.next;
                 }
-                if(currentNode != null)
+                // if we have not reached the end without finding the node, then the next node is the one that needs to be removed
+                if(currentNode.next != null)
                     currentNode.next = currentNode.next.next;
             }
         }

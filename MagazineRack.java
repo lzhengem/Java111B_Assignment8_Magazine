@@ -31,7 +31,7 @@ public class MagazineRack
             for(int j=1; read.hasNextLine();j++){
                 newLine = read.nextLine();
                 System.out.println(j +":"+newLine);
-                rack.add(new Magazine(newLine));
+                rack.insert(new Magazine(newLine));
                 }
              read.close();
             }
@@ -45,7 +45,7 @@ public class MagazineRack
             if (scan.nextLine().equals("y")){
                 System.out.println("\nEnter title: ");
                 newTitle = scan.nextLine();
-                rack.add(new Magazine(newTitle));
+                rack.insert(new Magazine(newTitle));
             }else
                 keepEnteringTitle = false;
           }
