@@ -54,6 +54,26 @@ public class MagazineList
         return result;
     }
 
+    // loops through the list, if mag's ascii is greater than current mag, then insert it after it
+    public void insert(Magazine mag){
+        MagazineNode currentNode = list;
+        MagazineNode magNode = new MagazineNode(mag);
+        // if the list is null or if the mag is suppose to be before the first mag in the list, then insert it in front
+        if (list == null || (mag.compareTo(currentNode.magazine)) < 0){
+            magNode.next = list;
+            list = magNode;
+        }
+        // if mag is suppose to be before the currentNodes's next magazine, then insert mag between currentNode and currentNode's next node
+        else{
+            while((mag.compareTo(currentNode.next.magazine)) < 0){
+                currentNode = currentNode.next;
+            }
+            magNode.next = currentNode.next;
+            currentNode.next = magNode;
+        }
+
+    }
+
     //*****************************************************************
     //  An inner class that represents a node in the magazine list.
     //  The public variables are accessed by the MagazineList class.

@@ -14,9 +14,16 @@ public class Mag_test
     {   //Testing Part 1. - compareto method
         Magazine mag1 = new Magazine("Student");
         Magazine mag2 = new Magazine("student affair");
+        Magazine mag3 = new Magazine("Another magazine");
+        MagazineList magList = new MagazineList();
+
         System.out.println("First Magazine:  " + mag1.toString());
         System.out.println("Second Magazine:  " + mag2.toString());
         System.out.println(mag1.compareTo(mag2));
+        magList.insert(mag1);
+        magList.insert(mag3);
+        System.out.println(magList);
+
 
 
     }
