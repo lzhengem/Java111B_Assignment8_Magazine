@@ -17,7 +17,7 @@ public class MagazineRack
     {    
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
-        String newTitle;
+        String newTitle,deleteTitle;
         String newLine; //records the data that is read in the text file
         // String userAnswer;
         File file = new File("mags.dat");
@@ -43,14 +43,21 @@ public class MagazineRack
             System.out.print("\nWould you like to enter a title: (y/n): ");
             // userAnswer = 
             if (scan.nextLine().equals("y")){
-                System.out.println("\nEnter title: ");
+                System.out.print("\nEnter title: ");
                 newTitle = scan.nextLine();
                 rack.insert(new Magazine(newTitle));
             }else
                 keepEnteringTitle = false;
           }
  
-        System.out.println("Current Magazine Titles: \n");
+        System.out.println("Here are your magazines: \n");
+        System.out.println(rack);
+
+        System.out.print("Enter a title to delete: ");
+        deleteTitle = scan.nextLine();
+        rack.delete(new Magazine(deleteTitle));
+
+        System.out.println("Here are your magazines: \n");
         System.out.println(rack);
         
         //Write the file
