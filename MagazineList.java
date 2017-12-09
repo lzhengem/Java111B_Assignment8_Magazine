@@ -65,7 +65,7 @@ public class MagazineList
         }
         // if mag is suppose to be before the currentNodes's next magazine, then insert mag between currentNode and currentNode's next node
         else{
-            while((mag.compareTo(currentNode.next.magazine)) < 0){
+            while(currentNode.next != null && (mag.compareTo(currentNode.next.magazine)) < 0){
                 currentNode = currentNode.next;
             }
             magNode.next = currentNode.next;

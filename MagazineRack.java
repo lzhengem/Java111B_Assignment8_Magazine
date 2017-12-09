@@ -15,6 +15,7 @@ public class MagazineRack
     //----------------------------------------------------------------
     public static void main(String[] args)
     {    
+        System.out.println("A".compareTo("b"));
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
         String newTitle,deleteTitle;
