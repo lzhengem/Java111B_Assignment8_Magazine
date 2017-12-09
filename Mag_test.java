@@ -22,6 +22,17 @@ public class Mag_test
         System.out.println(mag1.compareTo(mag2));
         magList.insert(mag1);
         magList.insert(mag3);
+        magList.insert(mag2);
+        System.out.println(magList);
+
+        System.out.println("Removing " + mag3 + ": ");
+        magList.delete(mag3);
+        System.out.println(magList);
+        System.out.println("Removing " + mag2 + ": ");
+        magList.delete(mag2);
+        System.out.println(magList);
+        System.out.println("Removing " + mag2 + ": ");
+        magList.delete(mag2);
         System.out.println(magList);
 
 

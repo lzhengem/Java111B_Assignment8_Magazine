@@ -97,4 +97,21 @@ public class MagazineList
     public void deleteAll(){
         list = null;
     }
+
+    // Delete a specific mag from list
+    public void delete(Magazine mag){
+        MagazineNode currentNode = list;
+        MagazineNode magNode = new MagazineNode(mag);
+        if(list != null){
+            if (magNode.magazine.compareTo(currentNode.magazine) == 0)
+                list = currentNode.next;
+            else{
+                while(currentNode.next != null && magNode.magazine.compareTo(currentNode.next.magazine) != 0){
+                    currentNode = currentNode.next;
+                }
+                if(currentNode != null)
+                    currentNode.next = currentNode.next.next;
+            }
+        }
+    }
 }
