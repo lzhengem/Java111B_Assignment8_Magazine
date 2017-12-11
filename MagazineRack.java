@@ -15,7 +15,6 @@ public class MagazineRack
     //----------------------------------------------------------------
     public static void main(String[] args)
     {    
-        System.out.println("other".compareTo("Baby"));
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
         String newTitle,deleteTitle;
@@ -62,8 +61,6 @@ public class MagazineRack
         
         //Write the file
         try{
-            FileWriter writeFile = new FileWriter(file, true);
-            BufferedWriter fileInput = new BufferedWriter(writeFile);
             PrintWriter fileOutPut = new PrintWriter(file);
             fileOutPut.print(rack);
             fileOutPut.close();
