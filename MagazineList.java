@@ -58,20 +58,26 @@ public class MagazineList
     public void insert(Magazine mag){
         MagazineNode currentNode = list;
         MagazineNode magNode = new MagazineNode(mag);
-        // if the list is null or if the mag is suppose to be before the first mag in the list, then insert it in front
-        if (list == null || (mag.compareTo(currentNode.magazine)) < 0){
+        // if the list is empty, or if the mag is suppose to be before the first magazine in the list, insert in first place
+        if (list == null || mag.compareTo(list.magazine) < 0){
             magNode.next = list;
             list = magNode;
         }
-        // if mag is suppose to be before the currentNodes's next magazine, then insert mag between currentNode and currentNode's next node
         else{
-            while(currentNode.next != null && (mag.compareTo(currentNode.next.magazine)) < 0){
-                currentNode = currentNode.next;
+            // loop through the list until mag should be before current node's next node
+            boolean magInserted = false;
+            while (magInserted != true){
+                // if current node is the last node or if mag should be before the next node, insert it after the current node
+                if (currentNode.next == null || mag.compareTo(currentNode.next.magazine) < 0){
+                    magNode.next = currentNode.next;
+                    currentNode.next = magNode;
+                    magInserted = true;
+                }
+                // loop through to the next node
+                else
+                    currentNode = currentNode.next;
             }
-            magNode.next = currentNode.next;
-            currentNode.next = magNode;
         }
-
     }
 
     //*****************************************************************

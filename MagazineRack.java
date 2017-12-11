@@ -15,6 +15,7 @@ public class MagazineRack
     //----------------------------------------------------------------
     public static void main(String[] args)
     {    
+        System.out.println("other".compareTo("Baby"));
         MagazineList rack = new MagazineList();
         Scanner scan = new Scanner(System.in);
         String newTitle,deleteTitle;
@@ -40,14 +41,14 @@ public class MagazineRack
         
         while(keepEnteringTitle){
             System.out.print("\nWould you like to enter a title: (y/n): ");
-            // userAnswer = 
-            if (scan.nextLine().equals("y")){
+            
+            if (scan.nextLine().toLowerCase().equals("y")){
                 System.out.print("\nEnter title: ");
                 newTitle = scan.nextLine();
                 rack.insert(new Magazine(newTitle));
             }else
                 keepEnteringTitle = false;
-          }
+        }
  
         System.out.println("Here are your magazines: \n");
         System.out.println(rack);
@@ -69,7 +70,6 @@ public class MagazineRack
         }
         catch(IOException error){
             System.out.println("File is opened in another program, cannot write file" );
-
+        }
     }
-}
 }
