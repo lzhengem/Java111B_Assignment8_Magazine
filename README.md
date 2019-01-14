@@ -1,3 +1,5 @@
+This project demonstrates the Comparable interface. Reads magazine names from a file and inserts new magazines into the magazine rack in lexicographically order.
+
 Magazine Assignment - Due 12/14
 
 1) due 12/4 CL Completed 11/29/2017.
